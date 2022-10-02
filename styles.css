@@ -1,4 +1,20 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 #container{
+    padding-top: 5%;
     display: grid;
     height: 600px;
     width: 600px;

@@ -26,7 +26,10 @@ function randomColor(e) {
     e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
 }
 
-
+function eraseColor(){
+    removeGrid()
+    createGrid()
+}
 
 function promptQtt() {
     x = 0
@@ -34,8 +37,7 @@ function promptQtt() {
         num = prompt("insert number of columns/rows, max 100", "0");
         gridSize = parseInt(num)
         if (num < 101 && num > 0) {
-            alert(num);
-            
+            alert(num); 
             removeGrid()
             createGrid()
             x = 1 
