@@ -11,7 +11,6 @@ btnBlack.addEventListener('click', () => {
     selectedColor = "black"
 })
 
-
 function createGrid() {
     for (i = 0; i < gridSize * gridSize; i++) {
         const div = document.createElement('div')
@@ -68,12 +67,14 @@ function paintGrid(e, color) {
 
 container.addEventListener('mousedown', event => {
     paintGridEvent = paintGrid(event, selectedColor);
-    window.addEventListener('mouseover', (e) => {
-        if (selectedColor == 'random') {
-            paintGrid(e, randomColor());
-        } else {
-            paintGrid(e, selectedColor);
-        }
-    });
+    if (event.buttons == 1) {
+        window.addEventListener('mouseover', (e) => {
+            if (selectedColor == 'random') {
+                paintGrid(e, randomColor());
+            } else {
+                paintGrid(e, selectedColor);
+            }
+        });
+    }
 });
 

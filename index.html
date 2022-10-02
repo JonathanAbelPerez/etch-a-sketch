@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,19 @@
 </head>
 
 <body>
-    <button id="promptBtn" onclick="promptQtt()">Grid Size</button>
-    <button onclick="eraseColor()">erase</button>
-    <button id="black">Black Paint</button>
-    <button id="color">Random Paint </button>
-    <div id="container">
-
+    <div class="box">
+        <div class="buttons-container">
+            <button id="promptBtn" onclick="promptQtt()">Grid Size</button>
+            <button onclick="eraseColor()">erase</button>
+            <button id="black">Black Paint</button>
+            <button id="color">Random Paint </button>
+        </div>
+        <div class="grid-container">
+            <div id="container">
+            </div>
+        </div>
     </div>
-    
+
 </body>
+
 </html>
